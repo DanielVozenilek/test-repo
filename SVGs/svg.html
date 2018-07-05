@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My first SVG</title>
+		<style>
+			#test {width: 50%; height: 50%;}
+		</style>
+
+		<script>
+			// var hands = [];
+			// hands.push(document.querySelector('.second-hand > *'));
+			// hands.push(document.querySelector('.minute-hand > *'));
+			// hands.push(document.querySelector('.hour-hand > *'));
+
+			// var cx = 100;
+			// var cy = 100;
+
+			// function shifter(val) {
+			//   return [val, cx, cy].join(' ');
+			// }
+
+			// var date = new Date();
+			// var hoursAngle = 360 * date.getHours() / 12 + date.getMinutes() / 2;
+			// var minuteAngle = 360 * date.getMinutes() / 60;
+			// var secAngle = 360 * date.getSeconds() / 60;
+
+			// hands[0].setAttribute('from', shifter(secAngle));
+			// hands[0].setAttribute('to', shifter(secAngle + 360));
+			// hands[1].setAttribute('from', shifter(minuteAngle));
+			// hands[1].setAttribute('to', shifter(minuteAngle + 360));
+			// hands[2].setAttribute('from', shifter(hoursAngle));
+			// hands[2].setAttribute('to', shifter(hoursAngle + 360));
+
+			// for(var i = 1; i <= 12; i++) {
+			//   var el = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+			//   el.setAttribute('x1', '100');
+			//   el.setAttribute('y1', '30');
+			//   el.setAttribute('x2', '100');
+			//   el.setAttribute('y2', '40');
+			//   el.setAttribute('transform', 'rotate(' + (i*360/12) + ' 100 100)');
+			//   el.setAttribute('style', 'stroke: #ffffff;');
+			//   document.querySelector('svg').appendChild(el);
+			// }
+
+		</script>
+
+
+
+	</head>
+	<body>
+		<div id="test">
+			<svg viewBox="0 0 100 100" mlns="http://www.w3.org/2000/svg">
+				<g>
+					<circle cx="50" cy="50" r="48" stroke="black" fill="none" stroke-width="1"/>
+				</g>
+				<g>
+					<line class="second-hand" x1="50" x2="50" y1="50" y2="10" stroke-width="1" stroke="red" >
+						<animatetransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="60s" repeatCount="indefinite"/>
+                    </line>
+
+					<line class="minute-hand" x1="50" x2="50" y1="50" y2="15" stroke-width="2" stroke="blue" >
+						<animatetransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="3600s" repeatCount="indefinite"/>
+					</line>
+					<line class="hour-hand" x1="50" x2="50" y1="50" y2="25" stroke-width="3" stroke="black" >
+						<animatetransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="432000s" repeatCount="indefinite"/>
+					</line>
+				</g>
+			</svg>
+		</div>
+	</body>
+</html>
