@@ -7,7 +7,7 @@
 		    scope: {
 		    	offset: '@'
 		    },
-		    templateUrl: './clock.tpl.html',
+		    templateUrl: '/scripts/directives/clock/clock.tpl.html',
 		    controller: function($scope, $element, $attrs){
 
 		    }
